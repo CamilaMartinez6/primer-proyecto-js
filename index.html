@@ -1,14 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=
     , initial-scale=1.0">
+    <!--fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/candy-beans" rel="stylesheet">
+    <!--BS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
     <!--JS-->
     <script defer src="./js/main.js"></script>
-    <title>primera pre entrega</title>
+    <title>Sweet Brew | Cafeteria</title>
 </head>
+
 <body>
-    <h1>primera pre entrega</h1>
+    <header>
+        <nav class="navbar">
+            <div class="navbrand-container">
+                <a class="nav-brand" href="#">
+                    <img src="./assets/logo-opcion-2.png">
+                </a>
+            </div>
+            <button class="boton-carrito" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                aria-controls="offcanvasScrolling">
+                <div class="carrito-container">
+                    <svg class="icono-fondo-hover" xmlns="http://www.w3.org/2000/svg" width="50" height="53"
+                        viewBox="0 0 84 81" fill="none">
+                        <path
+                            d="M82 40.5C82 61.695 64.1606 79 42 79C19.8394 79 2 61.695 2 40.5C2 19.305 19.8394 2 42 2C64.1606 2 82 19.305 82 40.5Z"
+                            fill="#FFF8F2" stroke="#5F1E1E" stroke-width="4" />
+                    </svg>
+                    <svg class="carrito-icono" xmlns="http://www.w3.org/2000/svg" width="32" height="35"
+                        viewBox="0 0 50 53" fill="none">
+                        <path
+                            d="M11.0119 15.2921H39.7411C40.3232 15.2921 40.8989 15.4209 41.4309 15.6701C41.963 15.9194 42.4397 16.2835 42.8303 16.7391C43.2209 17.1947 43.5168 17.7317 43.6988 18.3154C43.8807 18.899 43.9448 19.5165 43.8869 20.1279L42.6369 33.3223C42.5341 34.4076 42.0529 35.4138 41.2868 36.1457C40.5207 36.8775 39.5243 37.2828 38.4911 37.2829H18.5952C17.6316 37.2833 16.6977 36.9311 15.9524 36.2864C15.2071 35.6416 14.6966 34.7442 14.5077 33.7467L11.0119 15.2921Z"
+                            stroke="#5F1E1E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M11.0119 15.292L9.3244 8.16043C9.21154 7.68488 8.95139 7.26278 8.58525 6.96117C8.21912 6.65956 7.768 6.49574 7.30357 6.49573H4.7619"
+                            stroke="#5F1E1E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M17.2619 46.0791H21.4286" stroke="#5F1E1E" stroke-width="7" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M33.9286 46.0791H38.0953" stroke="#5F1E1E" stroke-width="7" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </button>
+
+            <div class="offcanvas offcanvas-start carrito-container" data-bs-scroll="true" data-bs-backdrop="false"
+                tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header carrito-header">
+                    <h5 class="offcanvas-title carrito-titulo" id="offcanvasScrollingLabel">Su Pedido</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body carrito-body">
+                    <p>Try scrolling the rest of the page to see this option in action.</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container categorias-container">
+            <a id="categoriaBebidasCalientes" href="#" class="categorias-button">
+                <svg class="icono-bebidas-calientes" xmlns="http://www.w3.org/2000/svg" width="48" height="47"
+                    viewBox="0 0 41 39" fill="none">
+                    <path
+                        d="M5.82544 16.3962H30.2888V24.9275C30.2888 28.0133 29.0001 30.9727 26.7062 33.1547C24.4123 35.3367 21.3011 36.5625 18.0571 36.5625C14.8131 36.5625 11.7019 35.3367 9.40801 33.1547C7.11413 30.9727 5.82544 28.0133 5.82544 24.9275V16.3962Z"
+                        stroke="#5F1E1E" stroke-width="5" stroke-miterlimit="10" />
+                    <path
+                        d="M30.2888 19.5H32.7317C34.2436 19.5043 35.6923 20.0775 36.7614 21.0944C37.8304 22.1113 38.433 23.4894 38.4376 24.9275C38.4376 26.367 37.8364 27.7475 36.7664 28.7653C35.6963 29.7832 34.245 30.355 32.7317 30.355H28.6488"
+                        stroke="#5F1E1E" stroke-width="5" stroke-miterlimit="10" />
+                    <path d="M2.5625 36.5625H33.5517" stroke="#5F1E1E" stroke-width="5" stroke-miterlimit="10" />
+                    <path
+                        d="M9.08836 2.4375L8.26836 4.0625C8.03241 4.54907 7.91022 5.07853 7.91022 5.61437C7.91022 6.15021 8.03241 6.67968 8.26836 7.16625C8.50432 7.65282 8.6265 8.18228 8.6265 8.71812C8.6265 9.25396 8.50432 9.78343 8.26836 10.27L7.44836 11.895"
+                        stroke="#5F1E1E" stroke-width="4" stroke-miterlimit="10" />
+                    <path
+                        d="M18.8771 2.4375L18.0571 4.0625C17.8211 4.54907 17.6989 5.07853 17.6989 5.61437C17.6989 6.15021 17.8211 6.67968 18.0571 7.16625C18.293 7.65282 18.4152 8.18228 18.4152 8.71812C18.4152 9.25396 18.293 9.78343 18.0571 10.27L17.2371 11.895"
+                        stroke="#5F1E1E" stroke-width="4" stroke-miterlimit="10" />
+                    <path
+                        d="M28.6488 2.4375L27.8459 4.0625C27.6019 4.54691 27.4752 5.07722 27.4752 5.61437C27.4752 6.15153 27.6019 6.68184 27.8459 7.16625C28.0818 7.65282 28.204 8.18228 28.204 8.71812C28.204 9.25396 28.0818 9.78343 27.8459 10.27L27.0259 11.895"
+                        stroke="#5F1E1E" stroke-width="4" stroke-miterlimit="10" />
+                </svg>
+                <p>Bebidas Calientes</p>
+            </a>
+            <a id="CategoriaBebidasFrias" href="#" class="categorias-button">
+                <svg class="icono-bebidas-frias" xmlns="http://www.w3.org/2000/svg" width="42" height="42"
+                    viewBox="0 0 42 42" fill="none">
+                    <path
+                        d="M31.756 10.7693L30.7156 19.5158L29.6574 28.2624L28.3877 38.7693H11.5634L10.2937 28.2624L9.2532 19.5158L8.19507 10.7693H31.756Z"
+                        stroke="#5F1E1E" stroke-width="4" stroke-miterlimit="10" />
+                    <path d="M5.12195 10.7693H34.8293" stroke="#5F1E1E" stroke-width="4" stroke-miterlimit="10" />
+                    <path d="M26.7123 3.23071H13.2388L8.19507 6.99337V10.7692H31.756V6.99337L26.7123 3.23071Z"
+                        stroke="#5F1E1E" stroke-width="4" stroke-miterlimit="10" />
+                    <path
+                        d="M24.5853 23.6602C24.5923 24.6555 24.2713 25.6228 23.6767 26.3974C23.0822 27.172 22.2507 27.7063 21.3238 27.9094C20.3969 28.1125 19.4317 27.9719 18.5923 27.5114C17.7529 27.0509 17.091 26.2991 16.7193 25.3836C16.3475 24.4682 16.2888 23.4456 16.5532 22.4898C16.8175 21.534 17.3885 20.7039 18.1691 20.1407C18.9498 19.5774 19.8919 19.3158 20.8353 19.4002C21.7787 19.4846 22.6652 19.9099 23.3441 20.6037C23.7371 20.9983 24.0497 21.4726 24.2631 21.998C24.4764 22.5234 24.586 23.0889 24.5853 23.6602Z"
+                        stroke="#5F1E1E" stroke-width="4" stroke-miterlimit="10" />
+                </svg>
+                <p>Bebidas Frías</p>
+            </a>
+            <a id="categoriaComida" href="#" class="categorias-button">
+                <svg class="icono-comidas" xmlns="http://www.w3.org/2000/svg" width="41" height="39" viewBox="0 0 41 39"
+                    fill="none">
+                    <g clip-path="url(#clip0_17_74)">
+                        <path
+                            d="M13.9229 28.9088C13.1243 30.5412 12.517 32.2524 12.112 34.0113C11.9863 34.5548 11.7116 35.0571 11.3157 35.4669C10.9198 35.8768 10.417 36.1796 9.85817 36.3447C9.29939 36.5098 8.70461 36.5312 8.13431 36.4067C7.56401 36.2823 7.0385 36.0165 6.6112 35.6363C3.67286 32.8413 2.86995 28.5675 3.9462 23.9525C4.13375 24.1013 4.3404 24.2269 4.5612 24.3263L12.9491 28.6C13.2555 28.749 13.5838 28.8531 13.9229 28.9088Z"
+                            stroke="#5F1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M37.5833 6.24006C37.983 6.64652 38.2625 7.14639 38.3933 7.68887C38.5241 8.23136 38.5016 8.79712 38.3281 9.32865C38.1545 9.86018 37.8361 10.3385 37.4053 10.7151C36.9744 11.0917 36.4464 11.353 35.875 11.4726C34.0259 11.8578 32.227 12.4354 30.5108 13.1951C30.4523 12.8725 30.3428 12.5603 30.1862 12.2688L25.625 4.29006C25.5205 4.08003 25.3885 3.88346 25.2321 3.70506C30.0666 2.68131 34.5596 3.44506 37.5833 6.24006Z"
+                            stroke="#5F1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M20.5 24.8788L17.2371 27.9825C16.813 28.3871 16.2889 28.6839 15.7128 28.8458C15.1367 29.0076 14.5272 29.0293 13.94 28.9088C13.601 28.8531 13.2727 28.749 12.9663 28.6L4.51003 24.375C4.28924 24.2757 4.08259 24.1501 3.89503 24.0013C3.50208 23.6939 3.1809 23.3118 2.95204 22.8796C2.72318 22.4474 2.59168 21.9745 2.56596 21.4912C2.54023 21.0079 2.62084 20.5247 2.80263 20.0727C2.98442 19.6207 3.26339 19.2098 3.6217 18.8662L6.42337 16.25C6.51239 16.5786 6.65661 16.8914 6.85045 17.1762C7.16493 17.6728 7.60549 18.0863 8.1317 18.3788L17.425 23.4162L19.6288 24.6187C19.9052 24.7432 20.1984 24.8307 20.5 24.8788Z"
+                            stroke="#5F1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M25.215 3.70497C25.3715 3.88338 25.5035 4.07995 25.608 4.28997L30.0667 12.3175C30.2233 12.6089 30.3327 12.9212 30.3913 13.2437C30.518 13.8022 30.4952 14.3821 30.3251 14.93C30.1549 15.478 29.8429 15.9765 29.4175 16.38L26.1546 19.5C26.081 19.2153 25.966 18.9419 25.813 18.6875L24.5488 16.5912L19.253 7.75122C18.9501 7.23879 18.515 6.80817 17.9888 6.49997C17.7093 6.32742 17.4041 6.19594 17.0834 6.10997L19.8167 3.44497C20.1779 3.10414 20.6099 2.83878 21.0851 2.66586C21.5602 2.49293 22.0681 2.41626 22.5762 2.44073C23.0844 2.4652 23.5815 2.59028 24.0359 2.80798C24.4903 3.02567 24.8919 3.33119 25.215 3.70497Z"
+                            stroke="#5F1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M19.2529 7.73505L24.5487 16.575L25.8129 18.6713C25.9659 18.9257 26.0809 19.1992 26.1546 19.4838C26.3245 20.0709 26.3271 20.6904 26.162 21.2787C25.9968 21.8671 25.67 22.4029 25.215 22.8313L24.0021 23.985C23.5517 24.4179 22.9884 24.7288 22.3699 24.8859C21.7514 25.0429 21.1001 25.0405 20.4829 24.8788C20.1837 24.8088 19.8962 24.6994 19.6287 24.5538L17.425 23.3513L8.13164 18.3138C7.59918 18.0235 7.15255 17.6099 6.8333 17.1113C6.6519 16.8454 6.51368 16.5551 6.4233 16.25C6.24574 15.6532 6.23923 15.0221 6.40444 14.4221C6.56965 13.822 6.90056 13.275 7.36289 12.8375L13.4958 7.0038C13.9556 6.56403 14.5308 6.24925 15.1616 6.0921C15.7924 5.93495 16.4559 5.94115 17.0833 6.11005C17.4288 6.19473 17.7576 6.33191 18.0571 6.5163C18.5541 6.8238 18.9646 7.24219 19.2529 7.73505Z"
+                            stroke="#5F1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_17_74">
+                            <rect width="41" height="39" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <p>Comidas</p>
+            </a>
+        </div>
+        <section class="container productos-container">
+            <h2 class="categoria-titulo">Bebidas Calientes</h2>
+            <div class="container bebidas-calientes-container">
+                <div class="card producto-card" style="width: 18rem;">
+                    <img src="./assets/bebida-caliente-americano.png" class="card-img-top producto-img" alt="americano">
+                    <div class="card-body producto-card-body">
+                        <h5 class="card-title producto-nombre">Americano</h5>
+                        <p class="card-text producto-descripcion">Café espresso con agua
+                            caliente, suave y aromático.</p>
+                        <div class="container precio-container">
+                            <h5 class="card-text producto-precio">$600</h5>
+                            <a href="#" class="btn btn-agregar-carrito">
+                                <svg class="icono-plus-fondo" xmlns="http://www.w3.org/2000/svg" width="60" height="60"
+                                    viewBox="0 0 60 60" fill="none">
+                                    <circle cx="30" cy="30" r="30" fill="#ED9F87" />
+                                </svg>
+                                <svg class="icono-plus" xmlns="http://www.w3.org/2000/svg" width="45" height="45"
+                                    viewBox="0 0 45 45" fill="none">
+                                    <path d="M22.5 9.375V35.625M9.375 22.5H35.625" stroke="#F5F5F5" stroke-width="4"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="categoria-titulo">Bebidas Frias</h2>
+            <div class="container bebidas-frias-container">
+            </div>
+            <h2 class="categoria-titulo">Comidas</h2>
+            <div class="container comidas-container">
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
