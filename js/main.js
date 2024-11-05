@@ -62,7 +62,7 @@ function crearCardProducto(producto) {
 }
 
 function mostrarProductosCategoria() {
-    const productosGuardados = JSON.parse(localStorage.getItem("carrito")) || []
+    const productosGuardados = JSON.parse(localStorage.getItem("carrito"))
     const categorias = ['bebidas calientes', 'bebidas frias', 'comidas']
 
     categorias.forEach(categoria => {
@@ -98,8 +98,8 @@ const offCanvas = document.getElementById("offcanvasScrolling")
 
 function abrirOffCanvas() { //funcion para que no se me cierre el carrito cuando agrego otro producto
     if (!offCanvas.classList.contains('show')) {
-        const offcanvasInstancia = new bootstrap.Offcanvas(offCanvas);
-        offcanvasInstancia.show();
+        const offcanvasInstancia = new bootstrap.Offcanvas(offCanvas)
+        offcanvasInstancia.show()
     }
 }
 
@@ -177,17 +177,17 @@ function guardarCarritoEnLocalStorage() {
     const productosCarrito = Array.from(productoCarrito.children).map(item => {
         const nombre = item.querySelector(".item-titulo").textContent;
         const descripcion = item.querySelector(".item-descripcion").textContent;
-        const precio = item.querySelector(".item-precio h6").textContent.replace('$', '');
+        const precio = item.querySelector(".item-precio h6").textContent.replace('$', '')
         const imagen = item.querySelector(".item-img").src;
         const unidades = parseInt(item.querySelector(".contador").textContent)
 
-        return { nombre, descripcion, precio, imagen, unidades };
-    });
-    localStorage.setItem("carrito", JSON.stringify(productosCarrito));
+        return { nombre, descripcion, precio, imagen, unidades }
+    })
+    localStorage.setItem("carrito", JSON.stringify(productosCarrito))
 }
 
 function mantenerCarritoLocalStorage() {
-    const productosGuardados = JSON.parse(localStorage.getItem("carrito")) || [];
+    const productosGuardados = JSON.parse(localStorage.getItem("carrito"))
     productosGuardados.forEach(producto => {
         mostrarProductoEnCarrito(
             new Producto(
@@ -198,8 +198,8 @@ function mantenerCarritoLocalStorage() {
                 producto.imagen
             ),
             producto.unidades
-        );
-    });
+        )
+    })
 }
 
 function eliminarProductoDelCarrito(item, producto) {
@@ -209,7 +209,7 @@ function eliminarProductoDelCarrito(item, producto) {
 
     item.remove()
 
-    const productosGuardados = JSON.parse(localStorage.getItem("carrito")) || []
+    const productosGuardados = JSON.parse(localStorage.getItem("carrito")) 
     const productosActualizados = productosGuardados.filter(item => item.nombre !== producto.nombre)
     localStorage.setItem("carrito", JSON.stringify(productosActualizados))
 

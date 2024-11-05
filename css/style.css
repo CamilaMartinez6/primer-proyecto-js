@@ -86,6 +86,9 @@
     display: flex;
     height: 100px;
     align-items: center;
+    border-bottom: 2px solid #5F1E1E;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 .item-img {
@@ -280,12 +283,9 @@ main {
     stroke: #FFF8F2;
 }
 
-
 .categorias-button:hover p {
     color: #FFF8F2;
 }
-
-
 
 .productos-container {
     display: flex;
@@ -397,3 +397,5 @@ main {
 .btn-agregar-carrito:hover .icono-plus-fondo circle {
     fill: #fdc8aad0
 }
+
+.carrito-item-container
