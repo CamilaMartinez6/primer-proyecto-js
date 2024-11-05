@@ -57,6 +57,12 @@
     fill: #5F1E1E;
 }
 
+.carrito-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
 .carrito-header {
     background-color: #FDC9AA;
 }
@@ -71,9 +77,140 @@
 }
 
 .carrito-body {
+    display: flex;
+    flex-direction: column;
     background-color: #FFF8F2;
+}
+
+.carrito-item-container {
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+
+.item-img {
+    width: 80px;
+    height: 80px;
+}
+
+.item-carrito-body {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.item-titulo {
+    color: #5F1E1E;
+    font-family: "Candy Beans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.item-descripcion {
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Delius;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 15px;
+    margin-bottom: 0px;
+}
+
+.item-precio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    margin-right: 10px;
+}
+
+.item-precio h6 {
+    color: #5F1E1E;
+    font-family: "Candy Beans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.unidades-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.unidades-container button {
+    border: none;
+    background-color: #FDC9AA;
+    color: #5F1E1E;
+    font-family: "Candy Beans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.unidades-container button:hover {
+    background-color: #5F1E1E;
+    color: #FDC9AA;
+}
+
+.unidades-container span {
+    color: #5F1E1E;
+    font-family: "Candy Beans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+}
+
+.carrito-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FDC9AA;
+    height: 80px;
 
 }
+
+.carrito-total h5 {
+    color: #5F1E1E;
+    font-family: "Candy Beans";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: start;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.btn-eliminar {
+    color: #5F1E1E;
+    font-family: "Candy Beans";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: start;
+    border: none;
+    background-color: transparent;
+    margin-left: 10px;
+}
+
+/*main*/
 
 main {
     display: flex;
@@ -143,9 +280,12 @@ main {
     stroke: #FFF8F2;
 }
 
+
 .categorias-button:hover p {
     color: #FFF8F2;
 }
+
+
 
 .productos-container {
     display: flex;
@@ -153,7 +293,9 @@ main {
     justify-content: center;
 }
 
-.bebidas-calientes-container {
+.bebidas-calientes-container,
+.bebidas-frias-container,
+.comidas-container {
     display: flex;
     justify-content: space-between;
     height: auto;
@@ -188,6 +330,7 @@ main {
     border: 4px solid #5F1E1E;
     background: #FFF8F2;
     align-items: center;
+    margin: 16px;
 }
 
 .producto-img {
@@ -254,3 +397,5 @@ main {
 .btn-agregar-carrito:hover .icono-plus-fondo circle {
     fill: #fdc8aad0
 }
+
+.carrito-body {}

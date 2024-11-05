@@ -60,7 +60,6 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body carrito-body">
-                    <p>Try scrolling the rest of the page to see this option in action.</p>
                 </div>
             </div>
         </nav>
@@ -89,7 +88,7 @@
                 </svg>
                 <p>Bebidas Calientes</p>
             </a>
-            <a id="CategoriaBebidasFrias" href="#" class="categorias-button">
+            <a id="CategoriaBebidasFrias" href="#bebidas-frias" class="categorias-button">
                 <svg class="icono-bebidas-frias" xmlns="http://www.w3.org/2000/svg" width="42" height="42"
                     viewBox="0 0 42 42" fill="none">
                     <path
@@ -104,7 +103,7 @@
                 </svg>
                 <p>Bebidas Frías</p>
             </a>
-            <a id="categoriaComida" href="#" class="categorias-button">
+            <a id="categoriaComida" href="#comidas" class="categorias-button">
                 <svg class="icono-comidas" xmlns="http://www.w3.org/2000/svg" width="41" height="39" viewBox="0 0 41 39"
                     fill="none">
                     <g clip-path="url(#clip0_17_74)">
@@ -133,37 +132,15 @@
                 <p>Comidas</p>
             </a>
         </div>
-        <section class="container productos-container">
+        <section id="productos-container" class="productos-container">
             <h2 class="categoria-titulo">Bebidas Calientes</h2>
-            <div class="container bebidas-calientes-container">
-                <div class="card producto-card" style="width: 18rem;">
-                    <img src="./assets/bebida-caliente-americano.png" class="card-img-top producto-img" alt="americano">
-                    <div class="card-body producto-card-body">
-                        <h5 class="card-title producto-nombre">Americano</h5>
-                        <p class="card-text producto-descripcion">Café espresso con agua
-                            caliente, suave y aromático.</p>
-                        <div class="container precio-container">
-                            <h5 class="card-text producto-precio">$600</h5>
-                            <a href="#" class="btn btn-agregar-carrito">
-                                <svg class="icono-plus-fondo" xmlns="http://www.w3.org/2000/svg" width="60" height="60"
-                                    viewBox="0 0 60 60" fill="none">
-                                    <circle cx="30" cy="30" r="30" fill="#ED9F87" />
-                                </svg>
-                                <svg class="icono-plus" xmlns="http://www.w3.org/2000/svg" width="45" height="45"
-                                    viewBox="0 0 45 45" fill="none">
-                                    <path d="M22.5 9.375V35.625M9.375 22.5H35.625" stroke="#F5F5F5" stroke-width="4"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div id="bebidas-calientes-container" class="bebidas-calientes-container">
             </div>
-            <h2 class="categoria-titulo">Bebidas Frias</h2>
-            <div class="container bebidas-frias-container">
+            <h2 id ="bebidas-frias" class="categoria-titulo">Bebidas Frias</h2>
+            <div id="bebidas-frias-container" class="bebidas-frias-container">
             </div>
-            <h2 class="categoria-titulo">Comidas</h2>
-            <div class="container comidas-container">
+            <h2 id="comidas" class="categoria-titulo">Comidas</h2>
+            <div id="comidas-container" class="comidas-container">
             </div>
         </section>
     </main>
