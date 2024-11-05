@@ -62,7 +62,7 @@ function crearCardProducto(producto) {
 }
 
 function mostrarProductosCategoria() {
-    const productosGuardados = JSON.parse(localStorage.getItem("carrito")) || []
+    const productosGuardados = JSON.parse(localStorage.getItem("carrito")) || [];
     const categorias = ['bebidas calientes', 'bebidas frias', 'comidas']
 
     categorias.forEach(categoria => {
@@ -209,7 +209,7 @@ function eliminarProductoDelCarrito(item, producto) {
 
     item.remove()
 
-    const productosGuardados = JSON.parse(localStorage.getItem("carrito")) 
+    const productosGuardados = JSON.parse(localStorage.getItem("carrito")) || []
     const productosActualizados = productosGuardados.filter(item => item.nombre !== producto.nombre)
     localStorage.setItem("carrito", JSON.stringify(productosActualizados))
 
