@@ -9,18 +9,18 @@ class Producto {
 }
 
 const productos = [
-    new Producto('Americano', 'Café espresso con agua caliente, suave y aromático.', '600', 'bebidas calientes', '../assets/bebida-caliente-americano.png'),
-    new Producto('Capuccino', 'Café espresso, leche espumosa y cremosa, con un toque suave.', '800', 'bebidas calientes', '../assets/bebida-caliente-capuccino.png'),
-    new Producto('Latte', 'Café espresso suave con abundante leche y espuma.', '650', 'bebidas calientes', '../assets/bebida-caliente-latte.png'),
-    new Producto('Mocca', 'Café espresso, chocolate, leche cremosa y un toque de espuma.', '750', 'bebidas calientes', '../assets/bebida-caliente-mocca.png'),
-    new Producto('Iced Latte', 'Café espresso frío, leche suave y hielo refrescante.', '1200', 'bebidas frias', '../assets/bebida-fria-ice-latte.png'),
-    new Producto('Frapee', 'Café espresso batido con hielo, cremoso y refrescante.', '1600', 'bebidas frias', '../assets/bebida-fria-cafe-frappe.png'),
-    new Producto('Cold Brew', 'Café infusionado en frío, suave y naturalmente dulce.', '1400', 'bebidas frias', '../assets/bebida-fria-cold-brew.png'),
-    new Producto('Iced Capuccino', 'Café espresso frío, leche espumosa y hielo refrescante.', '1450', 'bebidas frias', '../assets/bebida-fria-ice-capuccino.png'),
-    new Producto('Croissant', 'suave y hojaldrado, con un toque dulce irresistible.', '400', 'comidas', '../assets/comida-croissant.png'),
-    new Producto('Tostado', 'pan crujiente con queso derretido y jamón.', '1000', 'comidas', '../assets/comida-tostado.png'),
-    new Producto('Donas', 'esponjosas y dulces, cubiertas de glaseado de chocolate.', '500', 'comidas', '../assets/comida-donas.png'),
-    new Producto('Roll de Canela', 'masa suave y hojaldrada rellena de canela y glaseado dulce', '1200', 'comidas', '../assets/comida-rollcanela.png')
+    new Producto('Americano', 'Café espresso con agua caliente, suave y aromático.', '600', 'bebidas calientes', './assets/bebida-caliente-americano.png'),
+    new Producto('Capuccino', 'Café espresso, leche espumosa y cremosa, con un toque suave.', '800', 'bebidas calientes', './assets/bebida-caliente-capuccino.png'),
+    new Producto('Latte', 'Café espresso suave con abundante leche y espuma.', '650', 'bebidas calientes', './assets/bebida-caliente-latte.png'),
+    new Producto('Mocca', 'Café espresso, chocolate, leche cremosa y un toque de espuma.', '750', 'bebidas calientes', './assets/bebida-caliente-mocca.png'),
+    new Producto('Iced Latte', 'Café espresso frío, leche suave y hielo refrescante.', '1200', 'bebidas frias', './assets/bebida-fria-ice-latte.png'),
+    new Producto('Frapee', 'Café espresso batido con hielo, cremoso y refrescante.', '1600', 'bebidas frias', './assets/bebida-fria-cafe-frappe.png'),
+    new Producto('Cold Brew', 'Café infusionado en frío, suave y naturalmente dulce.', '1400', 'bebidas frias', './assets/bebida-fria-cold-brew.png'),
+    new Producto('Iced Capuccino', 'Café espresso frío, leche espumosa y hielo refrescante.', '1450', 'bebidas frias', './assets/bebida-fria-ice-capuccino.png'),
+    new Producto('Croissant', 'suave y hojaldrado, con un toque dulce irresistible.', '400', 'comidas', './assets/comida-croissant.png'),
+    new Producto('Tostado', 'pan crujiente con queso derretido y jamón.', '1000', 'comidas', './assets/comida-tostado.png'),
+    new Producto('Donas', 'esponjosas y dulces, cubiertas de glaseado de chocolate.', '500', 'comidas', './assets/comida-donas.png'),
+    new Producto('Roll de Canela', 'masa suave y hojaldrada rellena de canela y glaseado dulce', '1200', 'comidas', './assets/comida-rollcanela.png')
 ]
 
 const bebidasCalientesContainer = document.getElementById("bebidas-calientes-container")
