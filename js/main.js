@@ -106,7 +106,12 @@ function abrirOffCanvas() { //funcion para que no se me cierre el carrito cuando
 let total = 0
 const totalContainer = document.createElement("div")
 totalContainer.className = "carrito-total"
-totalContainer.innerHTML = `<h5>Total</h5><h5 id ="total"></h5>`
+totalContainer.innerHTML = `<div class="total-container">
+<h5>Total</h5> <h5 id ="total"></h5>
+</div> <div class="compra-decision-container">
+                    <button class="btn-vaciar-carrito">Vaciar carrito</button>
+                    <button class="btn-comprar">Comprar</button>
+                </div>`
 offCanvas.appendChild(totalContainer)
 
 function mostrarProductoEnCarrito(producto, unidades = 1) {
@@ -202,6 +207,8 @@ function mantenerCarritoLocalStorage() {
     })
 }
 
+mantenerCarritoLocalStorage()
+
 function eliminarProductoDelCarrito(item, producto) {
     const cantidad = parseInt(item.querySelector(".contador").textContent)
     total -= parseFloat(producto.precio) * cantidad
@@ -222,4 +229,19 @@ function eliminarProductoDelCarrito(item, producto) {
     }
 }
 
-mantenerCarritoLocalStorage()
+function vaciarCarrito() {
+    const btnVaciarCarrito = document.querySelector(".btn-vaciar-carrito")
+    btnVaciarCarrito.onclick = () => {
+        while (productoCarrito.firstChild) {
+            productoCarrito.firstChild.remove()
+        }
+        total = 0
+        document.getElementById("total").textContent = "$" + total
+
+        localStorage.removeItem("carrito")
+        const botonesAgregar = document.querySelectorAll(".btn-agregar-carrito")
+        botonesAgregar.forEach(boton => boton.disabled = false)
+    }
+}
+
+vaciarCarrito()
