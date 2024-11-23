@@ -221,14 +221,15 @@
     width: 400px;
 }
 
-.compra-decision-container{
+.compra-decision-container {
     display: flex;
     justify-content: space-between;
     width: 320px;
     padding-bottom: 30px;
 }
 
-.btn-vaciar-carrito, .btn-comprar{
+.btn-vaciar-carrito,
+.btn-comprar {
     width: 150px;
     border: 3px solid #5F1E1E;
     border-radius: 23px;
@@ -242,15 +243,14 @@
     padding: 6px;
 }
 
-.btn-vaciar-carrito:hover{
+.btn-vaciar-carrito:hover,
+.btn-comprar:hover {
     background-color: #5F1E1E;
     color: #FDC9AA;
 }
 
-.btn-comprar:hover{
-    background-color: #5F1E1E;
-    color: #FDC9AA;}
-    
+
+
 /*main*/
 
 main {
@@ -434,4 +434,155 @@ main {
 
 .btn-agregar-carrito:hover .icono-plus-fondo circle {
     fill: #fdc8aad0
+}
+
+/*formulario*/
+
+#formulario-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 853px;
+}
+
+#formularioPersona {
+    background-color: #f3d7bb;
+    border: 5px solid #5F1E1E;
+    padding: 50px;
+    border-radius: 50px;
+    height: 630px;
+    width: 500px;
+
+}
+
+.titulo-form {
+    color: #5F1E1E;
+    font-family: "Candy Beans";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.input-container {
+    margin-bottom: 30px;
+}
+
+.form-control {
+    border: 3px solid #5F1E1E;
+    background-color: #FFF8F2;
+}
+
+.form-label {
+    color: #5F1E1E;
+    font-family: "Candy Beans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.btn-enviar {
+    width: 150px;
+    border: 3px solid #5F1E1E;
+    border-radius: 23px;
+    background-color: #FFF8F2;
+    color: #5F1E1E;
+    text-align: center;
+    font-family: "Candy Beans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 6px;
+}
+
+.btn-enviar:hover {
+    background-color: #5F1E1E;
+    color: #FFF8F2;
+    border-color: #FFF8F2;
+}
+
+.alerta-sweet {
+    background-color: #FFF8F2;
+    border: 5px solid #5F1E1E;
+    border-radius: 10%;
+    font-family: Delius;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+}
+
+.icon-success {
+    background-color: #FFF8F2;
+}
+
+.titulo-continuar {
+    font-family: "Candy Beans";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    color: #5F1E1E;
+}
+
+.boton-completar {
+    font-family: "Candy Beans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #5F1E1E;
+    background-color: #FDC9AA;
+    border: 3px solid #5F1E1E;
+    border-radius: 20px;
+}
+
+.boton-completar:hover {
+    color: #FDC9AA;
+    background-color: #5F1E1E;
+    border: 3px solid #FDC9AA;
+}
+
+.datos-persona h3 {
+    font-family: "Candy Beans";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    color: #5F1E1E;
+}
+
+.datos-persona {
+    margin: 30px 30px;
+}
+
+.total-fila {
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+}
+
+.total-fila span {
+    background-color: transparent;
+    font-family: "Candy Beans";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    color: #5F1E1E;
+    position: relative;
+    left: 350px;
+}
+
+th {
+    width: 100px;
+}
+
+td {
+    background-color: transparent;
+}
+
+.tabla, td, th, tr {
+    background-color: #FFF8F2 !important;
+    border-color: #5F1E1E !important;
 }
