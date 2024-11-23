@@ -1,33 +1,7 @@
-class Producto {
-    constructor(nombre, descripcion, precio, categoria, imagen) {
-        this.nombre = nombre
-        this.descripcion = descripcion
-        this.precio = precio
-        this.categoria = categoria
-        this.imagen = imagen
-    }
-}
-
-const productos = [
-    new Producto('Americano', 'Café espresso con agua caliente, suave y aromático.', '600', 'bebidas calientes', './assets/bebida-caliente-americano.png'),
-    new Producto('Capuccino', 'Café espresso, leche espumosa y cremosa, con un toque suave.', '800', 'bebidas calientes', './assets/bebida-caliente-capuccino.png'),
-    new Producto('Latte', 'Café espresso suave con abundante leche y espuma.', '650', 'bebidas calientes', './assets/bebida-caliente-latte.png'),
-    new Producto('Mocca', 'Café espresso, chocolate, leche cremosa y un toque de espuma.', '750', 'bebidas calientes', './assets/bebida-caliente-mocca.png'),
-    new Producto('Iced Latte', 'Café espresso frío, leche suave y hielo refrescante.', '1200', 'bebidas frias', './assets/bebida-fria-ice-latte.png'),
-    new Producto('Frapee', 'Café espresso batido con hielo, cremoso y refrescante.', '1600', 'bebidas frias', './assets/bebida-fria-cafe-frappe.png'),
-    new Producto('Cold Brew', 'Café infusionado en frío, suave y naturalmente dulce.', '1400', 'bebidas frias', './assets/bebida-fria-cold-brew.png'),
-    new Producto('Iced Capuccino', 'Café espresso frío, leche espumosa y hielo refrescante.', '1450', 'bebidas frias', './assets/bebida-fria-ice-capuccino.png'),
-    new Producto('Croissant', 'suave y hojaldrado, con un toque dulce irresistible.', '400', 'comidas', './assets/comida-croissant.png'),
-    new Producto('Tostado', 'pan crujiente con queso derretido y jamón.', '1000', 'comidas', './assets/comida-tostado.png'),
-    new Producto('Donas', 'esponjosas y dulces, cubiertas de glaseado de chocolate.', '500', 'comidas', './assets/comida-donas.png'),
-    new Producto('Roll de Canela', 'masa suave y hojaldrada rellena de canela y glaseado dulce', '1200', 'comidas', './assets/comida-rollcanela.png')
-]
-
 const bebidasCalientesContainer = document.getElementById("bebidas-calientes-container")
 const bebidasFriasContainer = document.getElementById("bebidas-frias-container")
 const comidasContainer = document.getElementById("comidas-container")
 const productoCarrito = document.getElementsByClassName("carrito-body")[0]
-
 
 function crearCardProducto(producto) {
     const card = document.createElement("div")
@@ -61,7 +35,16 @@ function crearCardProducto(producto) {
     return card
 }
 
-function mostrarProductosCategoria() {
+fetch("./db/data.json")
+.then(response => response.json())
+.then(data => {
+    const productos = data
+
+    mostrarProductosCategoria(productos)
+})
+
+function mostrarProductosCategoria(productos) {
+
     const productosGuardados = JSON.parse(localStorage.getItem("carrito")) || [];
     const categorias = ['bebidas calientes', 'bebidas frias', 'comidas']
 
@@ -91,9 +74,7 @@ function mostrarProductosCategoria() {
         })
     })
 }
-
-mostrarProductosCategoria()
-
+ 
 const offCanvas = document.getElementById("offcanvasScrolling")
 
 function abrirOffCanvas() { //funcion para que no se me cierre el carrito cuando agrego otro producto
@@ -116,6 +97,8 @@ offCanvas.appendChild(totalContainer)
 
 function mostrarProductoEnCarrito(producto, unidades = 1) {
 
+    try{
+    //throw new Error("prueba"); // para probar que funciona el catch
     const item = document.createElement("div")
     item.className = "carrito-item-container"
 
@@ -144,6 +127,13 @@ function mostrarProductoEnCarrito(producto, unidades = 1) {
     const btnEliminar = item.querySelector(".btn-eliminar")
     btnEliminar.onclick = () => eliminarProductoDelCarrito(item, producto)
     guardarCarritoEnLocalStorage()
+    } catch (error){
+        Toastify({
+            text: "No se pudo agregar el producto al carrito :(",
+            className: "toast-error",
+            duration: 3000
+            }).showToast();
+    }
 }
 
 function totalCarrito(item, producto, unidades = 0) {
@@ -193,17 +183,9 @@ function guardarCarritoEnLocalStorage() {
 
 function mantenerCarritoLocalStorage() {
     const productosGuardados = JSON.parse(localStorage.getItem("carrito")) || []
+    
     productosGuardados.forEach(producto => {
-        mostrarProductoEnCarrito(
-            new Producto(
-                producto.nombre,
-                producto.descripcion,
-                producto.precio,
-                '',
-                producto.imagen
-            ),
-            producto.unidades
-        )
+            mostrarProductoEnCarrito(producto, producto.unidades)
     })
 }
 

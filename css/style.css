@@ -586,3 +586,13 @@ td {
     background-color: #FFF8F2 !important;
     border-color: #5F1E1E !important;
 }
+
+.toast-error{
+    font-family: "Candy Beans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    background: #f3d7bb;
+    color: #5F1E1E;
+    box-shadow: none;
+}

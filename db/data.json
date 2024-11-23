@@ -1,0 +1,87 @@
+[
+    {
+      "nombre": "Americano",
+      "descripcion": "Café espresso con agua caliente, suave y aromático.",
+      "precio": "600",
+      "categoria": "bebidas calientes",
+      "imagen": "./assets/bebida-caliente-americano.png"
+    },
+    {
+      "nombre": "Capuccino",
+      "descripcion": "Café espresso, leche espumosa y cremosa, con un toque suave.",
+      "precio": "800",
+      "categoria": "bebidas calientes",
+      "imagen": "./assets/bebida-caliente-capuccino.png"
+    },
+    {
+      "nombre": "Latte",
+      "descripcion": "Café espresso suave con abundante leche y espuma.",
+      "precio": "650",
+      "categoria": "bebidas calientes",
+      "imagen": "./assets/bebida-caliente-latte.png"
+    },
+    {
+      "nombre": "Mocca",
+      "descripcion": "Café espresso, chocolate, leche cremosa y un toque de espuma.",
+      "precio": "750",
+      "categoria": "bebidas calientes",
+      "imagen": "./assets/bebida-caliente-mocca.png"
+    },
+    {
+      "nombre": "Iced Latte",
+      "descripcion": "Café espresso frío, leche suave y hielo refrescante.",
+      "precio": "1200",
+      "categoria": "bebidas frias",
+      "imagen": "./assets/bebida-fria-ice-latte.png"
+    },
+    {
+      "nombre": "Frapee",
+      "descripcion": "Café espresso batido con hielo, cremoso y refrescante.",
+      "precio": "1600",
+      "categoria": "bebidas frias",
+      "imagen": "./assets/bebida-fria-cafe-frappe.png"
+    },
+    {
+      "nombre": "Cold Brew",
+      "descripcion": "Café infusionado en frío, suave y naturalmente dulce.",
+      "precio": "1400",
+      "categoria": "bebidas frias",
+      "imagen": "./assets/bebida-fria-cold-brew.png"
+    },
+    {
+      "nombre": "Iced Capuccino",
+      "descripcion": "Café espresso frío, leche espumosa y hielo refrescante.",
+      "precio": "1450",
+      "categoria": "bebidas frias",
+      "imagen": "./assets/bebida-fria-ice-capuccino.png"
+    },
+    {
+      "nombre": "Croissant",
+      "descripcion": "suave y hojaldrado, con un toque dulce irresistible.",
+      "precio": "400",
+      "categoria": "comidas",
+      "imagen": "./assets/comida-croissant.png"
+    },
+    {
+      "nombre": "Tostado",
+      "descripcion": "pan crujiente con queso derretido y jamón.",
+      "precio": "1000",
+      "categoria": "comidas",
+      "imagen": "./assets/comida-tostado.png"
+    },
+    {
+      "nombre": "Donas",
+      "descripcion": "esponjosas y dulces, cubiertas de glaseado de chocolate.",
+      "precio": "500",
+      "categoria": "comidas",
+      "imagen": "./assets/comida-donas.png"
+    },
+    {
+      "nombre": "Roll de Canela",
+      "descripcion": "masa suave y hojaldrada rellena de canela y glaseado dulce",
+      "precio": "1200",
+      "categoria": "comidas",
+      "imagen": "./assets/comida-rollcanela.png"
+    }
+  ]
+  
